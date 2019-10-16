@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+  }
+ p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+    background-color: orange; 
+    color: #ffffff;
+  }
+  .jumbotron {
+    color: orange;
+  }
+   
+    footer {
+      background-color: orange;
+      padding: 25px;
+    }
+    
+   .carousel-inner img {
+      width: 100%; 
+      margin: auto;
+      min-height:200px;
+  }
+
+.container-fluid {
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; 
+    }
+
+
+  </style>
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+</nav>
+
+<div class="container-fluid bg-1 text-center">
+  <h1 class="margin">ALVAS INSTITUTE OF ENGINEERING</h1>
+  <img src="logob.jpg" style="display:inline" width="100" height="100">
+  <h3>DEPARTMENT OF ISE PRESENTS presents</h3>
+</div>
+    
+  </div>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1" ></li>
+      <li data-target="#myCarousel" data-slide-to="2" ></li>
+
+    </ol>
+
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="pics5.jpg" alt="Image" >   
+      </div>
+      <div class="item">
+        <img src="pics4.jpg." alt="Image" >    
+      </div>
+      <div class="item">
+        <img src="pics1.jpg" alt="Image" > 
+      </div>
+    </div>
+
+
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+<br>
+<br>
+ <div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4" style="background-color:lavenderblush;"><h2>HOD</h2><h4>  JAYANTH K RATHOD</h4></div>               
+    <div class="col-sm-4" style="background-color:lavenderblush;"><h2>E-CORDINATOR</h2><h4>  MANJUNATH K R</h4></div>
+    <div class="col-sm-4" style="background-color:lavenderblush;"><h2>S-CORDINATOR</h2><h4>  1.RAKESH M R</h4>  <h4>2.ASHIKA SHETTY</h4></div>
+  </div>
+</div>
+
+ <div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4" style="background-color:lavenderblush;"><h2>DATE</h2><h4>  3 NOV 2019</h4></div>               
+    <div class="col-sm-4" style="background-color:lavenderblush;"><h2>VENUE</h2><h4>  KAMBALA GADDE</h4>  <h4>NEAR HOMEOPATHY</h4>  <h4>OPP.OF MAGGIE POINT</h4></div>
+  </div>
+</div>
+
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>ISE 2019,KESARD ONJI DINA,AIET <a href="https://www.google.co.in/maps/place/Alvas+Homeopathic+Medical+College/@13.0215659,74.9663539,17z/data=!3m1!4b1!4m5!3m4!1s0x3ba4aa09c57f13e3:0xbbfa01e5ba20ea35!8m2!3d13.0215607!4d74.9685426" title="Made by VARADA SHETTY">click to see the location</a></p>
+</footer>
+
+<script>
+$(document).ready(function(){
+
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    if (this.hash !== "") {
+
+      event.preventDefault();
+
+
+      var hash = this.hash;
+
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+
+        window.location.hash = hash;
+      });
+    } 
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</body>
+</html>
